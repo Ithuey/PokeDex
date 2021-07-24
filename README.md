@@ -1,6 +1,6 @@
 addons:
 
-npm install react-icons --save //For using Icon set
+npm install react-icons//For using Icon set
 
 npm install  json-server //used for json
 
