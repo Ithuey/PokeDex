@@ -21,7 +21,7 @@ function Evolutions(props) {
                   style={{ cursor: "pointer" }}
                   //   onClick={() => props.deleteFavorite(i)}
                 /> */}
-                <props.LikeButton id={i.id.id} />
+                {/* <props.LikeButton id={i.id.id} /> */}
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@ function Evolutions(props) {
                   style={{ cursor: "pointer" }}
                   //   onClick={() => props.deleteFavorite(i)}
                 /> */}
-                <props.LikeButton id={i} />
+                {/* <props.LikeButton id={i} /> */}
               </div>
             </div>
           </div>
