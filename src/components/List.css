@@ -1,0 +1,48 @@
+.list {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.06);
+  
+  margin-top: 10px;
+  width: 90%;
+  outline:1px solid #DDDDDD ;
+  
+}
+
+.list-body {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+.list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+
+.list-label {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+}
+
+.list-img {
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  background-color:#FBF7F0;
+  margin: 2px;
+}
