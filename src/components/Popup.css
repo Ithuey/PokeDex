@@ -2,7 +2,9 @@
     position: fixed; 
     top: calc(50% - 450px); 
     left: calc(50% - 310px); 
+
 }
+
 
 .popup-container{
     margin: 5px;
@@ -15,6 +17,8 @@
     height: 1000px;
     background-color: white;
 }
+
+
 
 .popup-img {
     

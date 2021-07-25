@@ -70,16 +70,16 @@ function App() {
     const clickedIsLiked = () => {
       setHeart(!heart);
 
-      //trying to get liked pokemon from popup evolutions to work
-      // const ev = pokemon.filter(x=> x.name == id.id.name);
+      
+      const ev = pokemon.find(x=> x.id == id.id);
 
       // console.log(id)
-      // console.log(ev)
+      console.log(ev)
 
-      if (isLiked.includes(id.id)) {
+      if (isLiked.includes(ev) || isLiked.includes(id.id) ) {
         return;
       } else {
-        return setIsLiked([...isLiked, id.id]);
+        return setIsLiked([...isLiked, ev || id.id]);
       }
     };
 

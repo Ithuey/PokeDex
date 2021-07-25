@@ -15,13 +15,7 @@ function Evolutions(props) {
                 <label style={{ fontWeight: "bold" }}>{i.name}</label>
               </div>
               <div className="popup-icon">
-                {/* <AiOutlineHeart
-                  size="2em"
-                  color="#EB6383"
-                  style={{ cursor: "pointer" }}
-                  //   onClick={() => props.deleteFavorite(i)}
-                /> */}
-                {/* <props.LikeButton id={i.id.id} /> */}
+                <props.LikeButton id={i.id} />
               </div>
             </div>
           </div>
@@ -38,13 +32,7 @@ function Evolutions(props) {
                 <label style={{ fontWeight: "bold" }}>{i.name}</label>
               </div>
               <div className="popup-icon">
-                {/* <AiOutlineHeart
-                  size="2em"
-                  color="#EB6383"
-                  style={{ cursor: "pointer" }}
-                  //   onClick={() => props.deleteFavorite(i)}
-                /> */}
-                {/* <props.LikeButton id={i} /> */}
+                <props.LikeButton id={i.id} />
               </div>
             </div>
           </div>

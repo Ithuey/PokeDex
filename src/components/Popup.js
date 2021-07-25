@@ -7,6 +7,7 @@ function Popup(props) {
     props.setTogglePopup(false);
   };
   return (
+    
     <div className="popup">
       {
         <div className="popup-container">
@@ -67,6 +68,7 @@ function Popup(props) {
         </div>
       }
     </div>
+    
   );
 }
 
