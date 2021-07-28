@@ -26,8 +26,7 @@ function App() {
   const [togglePopup, setTogglePopup] = useState(false);
   //store the info used by popup
   const [popupInfo, setPopupInfo] = useState();
-  //set like state
-  const [l, setL]=useState()
+
 
   useEffect(() => {
     fetch("http://localhost:3000/pokemon")
@@ -67,7 +66,6 @@ function App() {
 
   //Fills heart if pokemon is liked and saves to favorite. Clicking again delete from favorties and set hear outline
   function LikeButton(id) {
-    const [heart, setHeart] = useState(false);
     const ev = pokemon.find((x) => x.id == id.id);
 
     const deleteFavorite = () => {
@@ -77,12 +75,11 @@ function App() {
       }else{
         setIsLiked(isLiked.filter((item) => item.id !== id.id.id));
       }
-      
-      
+           
     };
 
     const clickedIsLiked = () => {
-      setHeart(!heart);
+      
 
  
       if (isLiked.includes(ev) || isLiked.includes(id.id)) {
