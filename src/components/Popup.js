@@ -1,5 +1,5 @@
 import "./Popup.css";
-import {AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import Evolutions from "./Evolutions";
 
 function Popup(props) {
@@ -7,7 +7,6 @@ function Popup(props) {
     props.setTogglePopup(false);
   };
   return (
-    
     <div className="popup">
       {
         <div className="popup-container">
@@ -68,7 +67,6 @@ function Popup(props) {
         </div>
       }
     </div>
-    
   );
 }
 

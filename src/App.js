@@ -26,6 +26,8 @@ function App() {
   const [togglePopup, setTogglePopup] = useState(false);
   //store the info used by popup
   const [popupInfo, setPopupInfo] = useState();
+  //set like state
+  const [l, setL]=useState()
 
   useEffect(() => {
     fetch("http://localhost:3000/pokemon")
@@ -63,20 +65,20 @@ function App() {
     });
   }
 
-  //Not able to get like function to work yet but clicking like does show of the favorites tab.
+  //Not able to get like function to work yet but clicking like does show in the favorites tab.
   function LikeButton(id) {
     const [heart, setHeart] = useState(false);
 
     const clickedIsLiked = () => {
       setHeart(!heart);
 
-      
-      const ev = pokemon.find(x=> x.id == id.id);
+      const ev = pokemon.find((x) => x.id == id.id);
 
+      let items = Object.assign({}, pokemon, {'like': true})
       // console.log(id)
-      console.log(ev)
+      console.log(ev);
 
-      if (isLiked.includes(ev) || isLiked.includes(id.id) ) {
+      if (isLiked.includes(ev) || isLiked.includes(id.id)) {
         return;
       } else {
         return setIsLiked([...isLiked, ev || id.id]);
