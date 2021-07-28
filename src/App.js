@@ -65,29 +65,39 @@ function App() {
     });
   }
 
-  //Not able to get like function to work yet but clicking like does show in the favorites tab.
+  //Fills heart if pokemon is liked and saves to favorite. Clicking again delete from favorties and set hear outline
   function LikeButton(id) {
     const [heart, setHeart] = useState(false);
+    const ev = pokemon.find((x) => x.id == id.id);
+
+    const deleteFavorite = () => {
+      if(isLiked.includes(ev)){
+        setIsLiked(isLiked.filter((item) => item.id !== ev.id));
+        console.log(ev)
+      }else{
+        setIsLiked(isLiked.filter((item) => item.id !== id.id.id));
+      }
+      
+      
+    };
 
     const clickedIsLiked = () => {
       setHeart(!heart);
 
-      const ev = pokemon.find((x) => x.id == id.id);
-
-      let items = Object.assign({}, pokemon, {'like': true})
-      // console.log(id)
-      console.log(ev);
-
+ 
       if (isLiked.includes(ev) || isLiked.includes(id.id)) {
         return;
       } else {
-        return setIsLiked([...isLiked, ev || id.id]);
+        return setIsLiked([...isLiked,  ev || id.id]);
       }
     };
 
-    return heart ? (
+
+
+    
+    return isLiked.includes(ev) || isLiked.includes(id.id) ? (
       <AiFillHeart
-        onClick={clickedIsLiked}
+        onClick={deleteFavorite}
         size="2em"
         color="#EB6383"
         className="icon"
@@ -172,7 +182,7 @@ function App() {
     setPopupInfo(i);
     setTogglePopup(true);
   };
-  console.log(popupInfo);
+  // console.log(popupInfo);
   return (
     <div className="App">
       <NavBar
